@@ -19,7 +19,7 @@
 namespace Phalcon;
 
 use Phalcon\Diff\SequenceMatcher;
-use Phalcon\Diff\Render\AbstractRender;
+use Phalcon\Diff\Render\RenderInterface;
 
 /**
  * Diff
@@ -84,10 +84,10 @@ class Diff
     /**
      * Render a diff using the supplied rendering class and return it.
      *
-     * @param AbstractRender $renderer An instance of the rendering object to use for generating the diff.
+     * @param RenderInterface $renderer An instance of the rendering object to use for generating the diff.
      * @return string The generated diff. Exact return value depends on the rendered.
      */
-    public function render(AbstractRender $renderer)
+    public function render(RenderInterface $renderer)
     {
         $renderer->diff = $this;
 

@@ -18,16 +18,18 @@
 
 namespace Phalcon\Diff\Render;
 
+use Phalcon\Diff;
+
 /**
  * Abstract class for diff renderers.
  *
  * @package Phalcon\Diff\Render
  */
-abstract class AbstractRender
+abstract class AbstractRender implements RenderInterface
 {
     /**
      * Instance of the diff class that this renderer is generating the rendered diff for.
-     * @var \Phalcon\Diff
+     * @var Diff
      */
     public $diff;
 
@@ -56,7 +58,7 @@ abstract class AbstractRender
 
     /**
      * Set the options of the renderer to those supplied in the passed in array.
-     * Options are merged with the default to ensure that there aren't any missing
+     * Options are merged with the default to ensure that there are not any missing
      * options.
      *
      * @param array $options Array of options to set.
@@ -68,11 +70,4 @@ abstract class AbstractRender
 
         return $this;
     }
-
-    /**
-     * Render and return diff.
-     *
-     * @return string.
-     */
-    abstract public function render();
 }
