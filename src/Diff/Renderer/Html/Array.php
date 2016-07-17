@@ -169,13 +169,13 @@ class BaseArray extends AbstractRender
     private function formatLines($lines)
     {
         if ($this->options['tabSize'] !== false) {
-            $lines = array_map(array($this, 'ExpandTabs'), $lines);
+            $lines = array_map([$this, 'ExpandTabs'], $lines);
         }
 
         $lines = array_map([$this, 'HtmlSafe'], $lines);
 
         foreach ($lines as &$line) {
-            $line = preg_replace_callback('# ( +)|^ #', __CLASS__."::fixSpaces", $line);
+            $line = preg_replace_callback('# ( +)|^ #', __CLASS__ . "::fixSpaces", $line);
         }
 
         return $lines;
@@ -199,7 +199,7 @@ class BaseArray extends AbstractRender
         $div = floor($count / 2);
         $mod = $count % 2;
 
-        return str_repeat('&nbsp; ', $div).str_repeat('&nbsp;', $mod);
+        return str_repeat('&nbsp; ', $div) . str_repeat('&nbsp;', $mod);
     }
 
     /**
