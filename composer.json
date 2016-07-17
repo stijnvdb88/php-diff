@@ -1,25 +1,45 @@
 {
-    "name": "phpspec/php-diff",
+    "name": "phalcongelist/php-diff",
     "type": "library",
     "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
     "license": "BSD-3-Clause",
-
     "authors": [
+        {
+            "name": "Phalcon Team",
+            "email": "team@phalconphp.com",
+            "homepage": "http://phalconphp.com/en/team"
+        },
         {
             "name": "Chris Boulton",
             "homepage": "http://github.com/chrisboulton"
         }
     ],
-
+    "support": {
+        "source": "https://github.com/phalcongelist/php-diff",
+        "issues": "https://github.com/phalcongelist/php-diff/issues"
+    },
+    "require": {
+        "php": ">= 5.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.6"
+    },
     "autoload": {
-        "psr-0": {
-            "Diff": "lib/"
+        "psr-4": {
+            "Phalcon\\Diff\\": "src/"
         }
     },
-    
+    "config": {
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "cs-test": [
+            "bin/phpcs src/"
+        ]
+    },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     }
 }
