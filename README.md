@@ -1,5 +1,7 @@
 # Phalcon Diff
 
+[![Build Status](https://travis-ci.org/phalcongelist/php-diff.svg?branch=master)](http://travis-ci.org/phalcongelist/php-diff)
+
 ## About this repo
 
 This is a fork of [Chris Boulton's Diff][fork] project.
