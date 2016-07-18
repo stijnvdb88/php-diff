@@ -113,7 +113,7 @@ class SequenceMatcher
     public function setSequences($a, $b)
     {
         $this->setSeq1($a)
-            ->setSeq2($b);
+             ->setSeq2($b);
 
         return $this;
     }
@@ -284,9 +284,9 @@ class SequenceMatcher
         while ($bestI > $alo && $bestJ > $blo && !$this->isBJunk($b[$bestJ - 1]) &&
                !$this->linesAreDifferent($bestI - 1, $bestJ - 1)
         ) {
-                --$bestI;
-                --$bestJ;
-                ++$bestSize;
+            --$bestI;
+            --$bestJ;
+            ++$bestSize;
         }
 
         while ($bestI + $bestSize < $ahi &&
@@ -294,21 +294,21 @@ class SequenceMatcher
                !$this->isBJunk($b[$bestJ + $bestSize]) &&
                !$this->linesAreDifferent($bestI + $bestSize, $bestJ + $bestSize)
         ) {
-                ++$bestSize;
+            ++$bestSize;
         }
 
         while ($bestI > $alo && $bestJ > $blo && $this->isBJunk($b[$bestJ - 1]) &&
-            !$this->linesAreDifferent($bestI - 1, $bestJ - 1)) {
-                --$bestI;
-                --$bestJ;
-                ++$bestSize;
+               !$this->linesAreDifferent($bestI - 1, $bestJ - 1)) {
+            --$bestI;
+            --$bestJ;
+            ++$bestSize;
         }
 
         while ($bestI + $bestSize < $ahi &&
                $bestJ + $bestSize < $bhi && $this->isBJunk($b[$bestJ + $bestSize]) &&
                !$this->linesAreDifferent($bestI + $bestSize, $bestJ + $bestSize)
         ) {
-                    ++$bestSize;
+            ++$bestSize;
         }
 
         return [
@@ -367,16 +367,9 @@ class SequenceMatcher
         $aLength = count($this->a);
         $bLength = count($this->b);
 
-        $queue = [
-            [
-                0,
-                $aLength,
-                0,
-                $bLength
-            ]
-        ];
-
+        $queue = [[0, $aLength, 0, $bLength]];
         $matchingBlocks = [];
+
         while (!empty($queue)) {
             list ($alo, $ahi, $blo, $bhi) = array_pop($queue);
             $x = $this->findLongestMatch($alo, $ahi, $blo, $bhi);
@@ -408,7 +401,8 @@ class SequenceMatcher
         $i1 = 0;
         $j1 = 0;
         $k1 = 0;
-        $nonAdjacent = [$this, 'tupleSort'];
+        $nonAdjacent = [];
+
         foreach ($matchingBlocks as $block) {
             list ($i2, $j2, $k2) = $block;
 

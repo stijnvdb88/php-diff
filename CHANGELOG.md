@@ -1,11 +1,16 @@
+# [2.0.3](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.3) (2016-07-18)
+
+* Fixed `BaseArray` class name
+* Fixed `SequenceMatcher::getMatchingBlocks`
+
 # [2.0.2](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.2) (2016-07-18)
 
-* Fixed Renderer namespace
+* Fixed `Renderer` namespace
 
 # [2.0.1](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.1) (2016-07-18)
 
 * Fixed Composer autoload namespace
-* Adding a CONTRIBUTING file
+* Adding a `CONTRIBUTING.md` file
 
 # [2.0.0](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.0) (2016-07-17)
 
