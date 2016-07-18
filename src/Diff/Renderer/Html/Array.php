@@ -16,14 +16,14 @@
  +------------------------------------------------------------------------+
 */
 
-namespace Phalcon\Diff\Render\Html;
+namespace Phalcon\Diff\Renderer\Html;
 
-use Phalcon\Diff\Render\AbstractRender;
+use Phalcon\Diff\Renderer\AbstractRender;
 
 /**
  * Base renderer for rendering HTML based diffs for PHP DiffLib.
  *
- * @package Phalcon\Diff\Render\Text
+ * @package Phalcon\Diff\Renderer\Text
  */
 class BaseArray extends AbstractRender
 {

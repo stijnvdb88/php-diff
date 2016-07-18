@@ -16,10 +16,12 @@
  +------------------------------------------------------------------------+
 */
 
-namespace Phalcon\Diff\Render;
+namespace Phalcon\Diff\Renderer;
 
 /**
  * Render Interface
+ *
+ * @package Phalcon\Diff\Renderer
  */
 interface RenderInterface
 {

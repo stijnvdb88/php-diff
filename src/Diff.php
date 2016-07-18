@@ -19,7 +19,7 @@
 namespace Phalcon;
 
 use Phalcon\Diff\SequenceMatcher;
-use Phalcon\Diff\Render\RenderInterface;
+use Phalcon\Diff\Renderer\RenderInterface;
 
 /**
  * Diff

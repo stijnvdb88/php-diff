@@ -16,12 +16,12 @@
  +------------------------------------------------------------------------+
 */
 
-namespace Phalcon\Diff\Render\Html;
+namespace Phalcon\Diff\Renderer\Html;
 
 /**
  * Inline HTML diff generator for PHP DiffLib.
  *
- * @package Phalcon\Diff\Render\Html
+ * @package Phalcon\Diff\Renderer\Html
  */
 class Inline extends BaseArray
 {
@@ -35,6 +35,7 @@ class Inline extends BaseArray
     {
         $changes = parent::render();
         $html = '';
+
         if (empty($changes)) {
             return $html;
         }
