@@ -607,7 +607,7 @@ class SequenceMatcher
      *
      * Out of all of the ratio calculation functions, this is the most
      * expensive to call if getMatchingBlocks or getOpCodes is yet to be
-     * called. The other calculation methods (quickRatio and realquickRatio)
+     * called. The other calculation methods (SequenceMatcher::quickRatio and SequenceMatcher::realQuickRatio)
      * can be used to perform quicker calculations but may be less accurate.
      *
      * The ratio is calculated as (2 * number of matches) / total number of
@@ -677,7 +677,7 @@ class SequenceMatcher
      *
      * @return float The calculated ratio.
      */
-    private function realquickRatio()
+    private function realQuickRatio()
     {
         $aLength = count($this->a);
         $bLength = count($this->b);
