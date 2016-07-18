@@ -16,12 +16,12 @@
  +------------------------------------------------------------------------+
 */
 
-namespace Phalcon\Diff\Render\Html;
+namespace Phalcon\Diff\Renderer\Html;
 
 /**
  * Side by Side HTML diff generator for PHP DiffLib.
  *
- * @package Phalcon\Diff\Render\Html
+ * @package Phalcon\Diff\Renderer\Html
  */
 class SideBySide extends BaseArray
 {
@@ -34,8 +34,8 @@ class SideBySide extends BaseArray
     public function render()
     {
         $changes = parent::render();
-
         $html = '';
+
         if (empty($changes)) {
             return $html;
         }

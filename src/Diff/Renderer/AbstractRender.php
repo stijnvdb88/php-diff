@@ -16,14 +16,14 @@
  +------------------------------------------------------------------------+
 */
 
-namespace Phalcon\Diff\Render;
+namespace Phalcon\Diff\Renderer;
 
 use Phalcon\Diff;
 
 /**
  * Abstract class for diff renderers.
  *
- * @package Phalcon\Diff\Render
+ * @package Phalcon\Diff\Renderer
  */
 abstract class AbstractRender implements RenderInterface
 {

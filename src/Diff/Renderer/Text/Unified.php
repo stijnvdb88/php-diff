@@ -16,14 +16,14 @@
  +------------------------------------------------------------------------+
 */
 
-namespace Phalcon\Diff\Render\Text;
+namespace Phalcon\Diff\Renderer\Text;
 
-use Phalcon\Diff\Render\AbstractRender;
+use Phalcon\Diff\Renderer\AbstractRender;
 
 /**
  * Unified diff generator for PHP DiffLib.
  *
- * @package Phalcon\Diff\Render\Text
+ * @package Phalcon\Diff\Renderer\Text
  */
 class Unified extends AbstractRender
 {
