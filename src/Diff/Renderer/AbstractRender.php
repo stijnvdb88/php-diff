@@ -31,7 +31,7 @@ abstract class AbstractRender implements RenderInterface
      * Instance of the diff class that this renderer is generating the rendered diff for.
      * @var Diff
      */
-    public $diff;
+    protected $diff;
 
     /**
      * Array of the default options that apply to this renderer.
@@ -67,6 +67,29 @@ abstract class AbstractRender implements RenderInterface
     public function setOptions(array $options)
     {
         $this->options = array_merge($this->defaultOptions, $options);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @return Diff
+     */
+    public function getDiffObject()
+    {
+        return $this->diff;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @param Diff $diff
+     * @return $this
+     */
+    public function setDiffObject(Diff $diff)
+    {
+        $this->diff = $diff;
 
         return $this;
     }

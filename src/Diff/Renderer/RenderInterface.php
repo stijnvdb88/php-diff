@@ -18,6 +18,8 @@
 
 namespace Phalcon\Diff\Render;
 
+use Phalcon\Diff;
+
 /**
  * Render Interface
  */
@@ -29,4 +31,19 @@ interface RenderInterface
      * @return string
      */
     public function render();
+
+    /**
+     * Gets Diff object.
+     *
+     * @return Diff $diff
+     */
+    public function getDiffObject();
+
+    /**
+     * Sets Diff object.
+     *
+     * @param Diff $diff
+     * @return RenderInterface
+     */
+    public function setDiffObject(Diff $diff);
 }
