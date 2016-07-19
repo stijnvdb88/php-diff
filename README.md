@@ -30,6 +30,7 @@ Please write us if you have any feedback.
 To run this library on your project, you need at least:
 
 * PHP >= 5.4
+* PHP mbstring extension
 
 ### Installation
 
