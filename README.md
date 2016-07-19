@@ -69,8 +69,8 @@ More complete documentation will be available shortly.
 
 Phalcon Diff is open-sourced software licensed under the [New BSD License][license].
 
-© 2009-2016, Chris Boulton <chris.boulton@interspire.com> <br>
 © 2016, Phalcon Framework Team and contributors <br>
+© 2009-2016, Chris Boulton <chris.boulton@interspire.com> <br>
 All rights reserved.
 
 [fork]: https://github.com/chrisboulton/php-diff
