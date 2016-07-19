@@ -54,8 +54,8 @@ class SideBySide extends BaseArray
         $html .= '<table class="Differences DifferencesSideBySide">';
         $html .= '<thead>';
         $html .= '<tr>';
-        $html .= '<th colspan="2">' . $this->oldTitle . '</th>';
-        $html .= '<th colspan="2">' . $this->newTitle . '</th>';
+        $html .= '<th colspan="2">' . htmlspecialchars($this->oldTitle) . '</th>';
+        $html .= '<th colspan="2">' . htmlspecialchars($this->newTitle) . '</th>';
         $html .= '</tr>';
         $html .= '</thead>';
 
