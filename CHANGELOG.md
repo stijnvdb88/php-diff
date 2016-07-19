@@ -1,3 +1,7 @@
+# [2.0.4](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.4) (2016-XX-XX)
+
+* Added ability to set title for `SideBySide` renderer
+
 # [2.0.3](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.3) (2016-07-18)
 
 * Fixed `BaseArray` class name
