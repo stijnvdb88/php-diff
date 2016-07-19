@@ -8,7 +8,7 @@ This is a fork of [Chris Boulton's Diff][fork] project.
 
 ## Introduction
 
-A comprehensive library for generating differences between
+Phalcon Diff is a comprehensive library for generating differences between
 two hashable objects (strings or arrays). Generated differences can be
 rendered in all of the standard formats including:
 
@@ -20,6 +20,40 @@ rendered in all of the standard formats including:
 The logic behind the core of the diff engine (ie, the sequence matcher)
 is primarily based on the Python difflib package. The reason for doing
 so is primarily because of its high degree of accuracy.
+
+Please write us if you have any feedback.
+
+## Get Started
+
+### Requirements
+
+To run this library on your project, you need at least:
+
+* PHP >= 5.4
+
+### Installation
+
+Install [Composer][composer] in a common location or in your project:
+
+```sh
+$ curl -s http://getcomposer.org/installer | php
+```
+
+Create the `composer.json` file as follows:
+
+```json
+{
+    "require": {
+        "phalcongelist/php-diff": "~2.0"
+    }
+}
+```
+
+Run the composer installer:
+
+```sh
+$ php composer.phar install
+```
 
 ## Example Use
 
@@ -40,4 +74,5 @@ Phalcon Diff is open-sourced software licensed under the [New BSD License][licen
 All rights reserved.
 
 [fork]: https://github.com/chrisboulton/php-diff
+[composer]: https://getcomposer.org
 [license]: https://github.com/phalcongelist/php-diff/blob/master/docs/LICENSE.txt
