@@ -19,7 +19,8 @@
         "issues": "https://github.com/phalcongelist/php-diff/issues"
     },
     "require": {
-        "php": ">= 5.4"
+        "php": ">= 5.4",
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~2.6"
