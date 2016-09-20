@@ -1,7 +1,11 @@
-# [2.0.4](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.4) (2016-XX-XX)
+# [2.0.5](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.5) (2016-XX-XX)
+
+
+# [2.0.4](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.4) (2016-09-20)
 
 * Added ability to set title for `SideBySide` renderer
 * Added ability to set title for `Inline` renderer
+* Added `mbstring` extension as package dependency [#6](https://github.com/phalcongelist/php-diff/issues/6)
 
 # [2.0.3](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.3) (2016-07-18)
 
