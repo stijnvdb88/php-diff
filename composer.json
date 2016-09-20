@@ -3,6 +3,9 @@
     "type": "library",
     "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
     "license": "BSD-3-Clause",
+    "keywords": [
+        "php", "diff", "phalcon"
+    ],
     "authors": [
         {
             "name": "Phalcon Team",
@@ -16,13 +19,15 @@
     ],
     "support": {
         "source": "https://github.com/phalcongelist/php-diff",
-        "issues": "https://github.com/phalcongelist/php-diff/issues"
+        "issues": "https://github.com/phalcongelist/php-diff/issues",
+        "wiki": "https://github.com/phalcongelist/php-diff/wiki"
     },
     "require": {
-        "php": ">= 5.4"
+        "php": ">= 5.4",
+        "ext-mbstring": "*"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "~2.6"
+        "squizlabs/php_codesniffer": "~2.7"
     },
     "autoload": {
         "psr-4": {

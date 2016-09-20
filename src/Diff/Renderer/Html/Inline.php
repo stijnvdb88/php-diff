@@ -25,6 +25,10 @@ namespace Phalcon\Diff\Renderer\Html;
  */
 class Inline extends BaseArray
 {
+    private $oldTitle = 'Old';
+    private $newTitle = 'New';
+    private $diffTitle = 'Differences';
+
     /**
      * Render a and return diff with changes between the two sequences
      * displayed inline (under each other)
@@ -40,12 +44,24 @@ class Inline extends BaseArray
             return $html;
         }
 
+        if (isset($this->options['oldTitle'])) {
+            $this->oldTitle = $this->options['oldTitle'];
+        }
+
+        if (isset($this->options['newTitle'])) {
+            $this->newTitle = $this->options['newTitle'];
+        }
+
+        if (isset($this->options['diffTitle'])) {
+            $this->diffTitle = $this->options['diffTitle'];
+        }
+
         $html .= '<table class="Differences DifferencesInline">';
         $html .= '<thead>';
         $html .= '<tr>';
-        $html .= '<th>Old</th>';
-        $html .= '<th>New</th>';
-        $html .= '<th>Differences</th>';
+        $html .= '<th>' . htmlspecialchars($this->oldTitle) . '</th>';
+        $html .= '<th>' . htmlspecialchars($this->newTitle) . '</th>';
+        $html .= '<th>' . htmlspecialchars($this->diffTitle) . '</th>';
         $html .= '</tr>';
         $html .= '</thead>';
         foreach ($changes as $i => $blocks) {

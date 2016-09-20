@@ -25,6 +25,9 @@ namespace Phalcon\Diff\Renderer\Html;
  */
 class SideBySide extends BaseArray
 {
+    private $oldTitle = 'Old Version';
+    private $newTitle = 'New Version';
+
     /**
      * Render a and return diff with changes between the two sequences
      * displayed side by side.
@@ -40,11 +43,19 @@ class SideBySide extends BaseArray
             return $html;
         }
 
+        if (isset($this->options['oldTitle'])) {
+            $this->oldTitle = $this->options['oldTitle'];
+        }
+
+        if (isset($this->options['newTitle'])) {
+            $this->newTitle = $this->options['newTitle'];
+        }
+
         $html .= '<table class="Differences DifferencesSideBySide">';
         $html .= '<thead>';
         $html .= '<tr>';
-        $html .= '<th colspan="2">Old Version</th>';
-        $html .= '<th colspan="2">New Version</th>';
+        $html .= '<th colspan="2">' . htmlspecialchars($this->oldTitle) . '</th>';
+        $html .= '<th colspan="2">' . htmlspecialchars($this->newTitle) . '</th>';
         $html .= '</tr>';
         $html .= '</thead>';
 
