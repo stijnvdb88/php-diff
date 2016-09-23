@@ -27,11 +27,19 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "~2.7"
+        "phpdocumentor/reflection-docblock": "^2.0.4",
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "~2.7",
+        "codeception/codeception": "~2.2"
     },
     "autoload": {
         "psr-4": {
             "Phalcon\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phalcon\\Test\\Unit\\": "tests/unit/"
         }
     },
     "config": {
@@ -40,6 +48,9 @@
     "scripts": {
         "cs-test": [
             "bin/phpcs src/"
+        ],
+        "unit-test": [
+            "bin/codecept run unit"
         ]
     },
     "extra": {
