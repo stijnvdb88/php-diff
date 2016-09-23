@@ -1,5 +1,5 @@
 # [2.0.5](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.5) (2016-XX-XX)
-
+* Introduced Unit tests
 
 # [2.0.4](https://github.com/phalcongelist/php-diff/releases/tag/v2.0.4) (2016-09-20)
 
